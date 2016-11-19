@@ -1,11 +1,14 @@
 new Vue({
-  el: '#app',
-  data: {
-    counter: 0
-  },
-  methods: {
-    increment() {
-      this.counter++;
+    el: '#app',
+    data: {
+        counter: 100
+    },
+    methods: {
+        increment() {
+            this.counter++;
+        },
+        decrement(){
+            this.counter--;
+        }
     }
-  }
 });

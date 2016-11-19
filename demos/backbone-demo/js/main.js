@@ -13,6 +13,7 @@ App.Router = Backbone.Router.extend({
 		'show/:id': 'show',
 		'download/*random': 'download',
 		'search/:query': 'search',
+        'get/:id': 'get',
 		'*other': 'default'
 	},
 
@@ -31,6 +32,10 @@ App.Router = Backbone.Router.extend({
 	search: function(query) {
 		$(document.body).append("调用了 Search 路由，参数等于 " + query + "<br>");
 	},
+
+    get: function (id) {
+        $(document.body).append("调用了 Get 路由，参数等于 " + id + "<br>");
+    },
 
 	default: function(other) {
 		$(document.body).append("你访问的 " + other + " 路由未定义<br>");

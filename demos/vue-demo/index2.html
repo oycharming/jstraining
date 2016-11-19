@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html >
-  <head>
+<html>
+<head>
     <meta charset="UTF-8">
     <title>Vue Demo</title>
-  </head>
-  <body>
-    <div id="my_view">
-      搜索：<input v-model="search" type="text" />
+</head>
+<body>
+<div id="my_view">
+    搜索：<input v-model="search" type="text"/>
     <ul>
-      <li v-for="friend in friends | filterBy search in 'name'"> {{ friend.name }} </li>
+        <li v-for="friend in friends | filterBy search in 'name'">{{ friend.name }}，{{ friend.age }}</li>
     </ul>
-    </div>
-    <script src="vue.min.js"></script>
-    <script src="app2.js"></script>
-  </body>
+
+    搜索年龄：<input v-model="age" type="number"/>
+    <ul>
+        <li v-for="friend in friends | filterBy age in 'age'">{{ friend.name }}，{{ friend.age }}</li>
+    </ul>
+</div>
+<script src="vue.min.js"></script>
+<script src="app2.js"></script>
+</body>
 </html>
